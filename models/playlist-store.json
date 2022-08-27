@@ -7,6 +7,22 @@
       "picture": "http://res.cloudinary.com/web-app-dev-1/image/upload/v1648479378/x3qxh79x9fac2fkvwths.jpg",
       "date": "2022-03-28T14:56:18.195Z",
       "songs": []
+    },
+    {
+      "id": "26b8fe4c-30bf-44c4-bba6-69f6787c2d53",
+      "userid": "2b6f0989-7b7f-4a38-ad26-aa06b922d751",
+      "title": "spicy tunes",
+      "picture": "http://res.cloudinary.com/dtt2e86e2/image/upload/v1661627195/utfxu4askngflsnouygr.jpg",
+      "date": "2022-08-27T19:06:34.952Z",
+      "songs": [
+        {
+          "id": "b88135ac-0847-48c4-b47c-96702de1e69c",
+          "title": "crab rave",
+          "artist": "noiseStorm",
+          "genre": "Disco",
+          "duration": "4mins"
+        }
+      ]
     }
   ]
 }
