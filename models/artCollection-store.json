@@ -1,0 +1,20 @@
+{
+  "collectionOfArtCollections": [
+    {
+      "id": "c3da4643-a45d-450e-a372-3fa335f6d8a5",
+      "userid": "2b6f0989-7b7f-4a38-ad26-aa06b922d751",
+      "title": "vsvsdfds",
+      "picture": "http://res.cloudinary.com/dtt2e86e2/image/upload/v1661774797/ym8fdmivhquj67wgayrt.jpg",
+      "date": "2022-08-29T12:06:36.199Z",
+      "artworks": [
+        {
+          "id": "9e67d2bc-ee43-4993-abb5-e8cc5fe084d1",
+          "title": "hgmg",
+          "artist": "dbvdfb",
+          "genre": "Classical",
+          "duration": "4mins"
+        }
+      ]
+    }
+  ]
+}

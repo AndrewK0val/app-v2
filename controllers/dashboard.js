@@ -5,7 +5,7 @@ const logger = require("../utils/logger");
 const uuid = require("uuid");
 const accounts = require("./accounts.js");
 
-const playlistStore = require("../models/playlist-store.js");
+const artCollectionStore = require("../models/artCollection-store.js");
 
 // create dashboard object
 const dashboard = {
@@ -15,36 +15,36 @@ const dashboard = {
     const loggedInUser = accounts.getCurrentUser(request);
     if (loggedInUser) {
       const viewData = {
-        title: "Playlist Dashboard",
-        playlists: playlistStore.getUserPlaylists(loggedInUser.id),
+        title: "ArtCollection Dashboard",
+        artCollections: artCollectionStore.getUserArtCollections(loggedInUser.id),
         fullname: loggedInUser.firstName + " " + loggedInUser.lastName,
         picture:loggedInUser.picture
       };
-      logger.info("about to render" + viewData.playlists);
+      logger.info("about to render" + viewData.artCollections);
       response.render("dashboard", viewData);
     } else response.redirect("/");
   },
 
-  deletePlaylist(request, response) {
-    const playlistId = request.params.id;
-    logger.debug("Deleting Playlist" + playlistId);
-    playlistStore.removePlaylist(playlistId);
+  deleteArtCollection(request, response) {
+    const artCollectionId = request.params.id;
+    logger.debug("Deleting ArtCollection" + artCollectionId);
+    artCollectionStore.removeArtCollection(artCollectionId);
     response.redirect("/dashboard");
   },
 
-  addPlaylist(request, response) {
+  addArtCollection(request, response) {
     const date = new Date();
     const loggedInUser = accounts.getCurrentUser(request);
-    const newPlayList = {
+    const newArtCollection = {
       id: uuid(),
       userid: loggedInUser.id,
       title: request.body.title,
       picture: request.files.picture,
       date: date,
-      songs: []
+      artworks: []
     };
-    logger.debug("Creating a new Playlist" + newPlayList);
-    playlistStore.addPlaylist(newPlayList, function() {
+    logger.debug("Creating a new ArtCollection" + newArtCollection);
+    artCollectionStore.addArtCollection(newArtCollection, function() {
       response.redirect("/dashboard");
     });
   }

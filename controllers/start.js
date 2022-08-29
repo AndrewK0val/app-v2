@@ -2,7 +2,7 @@
 
 // import all required modules
 const logger = require('../utils/logger');
-const playlistStore = require('../models/playlist-store.js');
+const artCollectionStore = require('../models/artCollection-store.js');
 const accounts = require ('./accounts.js');
 
 // create start object
@@ -16,17 +16,17 @@ const start = {
     
     if(loggedInUser){
       
-      const playlists = playlistStore.getAllPlaylists();
-      let numPlaylists = playlists.length;
-      let numSongs = 0;
-      for (let i in playlists) {
-        numSongs = numSongs + playlists[i].songs.length;
+      const artCollections = artCollectionStore.getAllArtCollections();
+      let numArtCollections = artCollections.length;
+      let numArtworks = 0;
+      for (let i in artCollections) {
+        numArtworks = numArtworks + artCollections[i].artworks.length;
       }
 
       const viewData = {
-        title: 'Welcome to the Playlist App!',
-        totalPlaylists: numPlaylists,
-        totalSongs: numSongs,
+        title: 'Welcome to the ArtCollection App!',
+        totalArtCollections: numArtCollections,
+        totalArtworks: numArtworks,
         fullname: loggedInUser.firstName + ' ' + loggedInUser.lastName,
         picture:loggedInUser.picture
       };

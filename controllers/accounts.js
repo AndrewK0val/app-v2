@@ -21,7 +21,7 @@ const accounts = {
   },
 
   logout(request, response) {
-    response.cookie('playlist', '');
+    response.cookie('artCollection', '');
     response.redirect('/');
   },
 
@@ -38,7 +38,7 @@ const accounts = {
     user.picture=request.files.picture,
     userstore.addUser(user, function() {
        logger.info('registering' + user.email);
-       response.cookie('playlist', user.email);
+       response.cookie('artCollection', user.email);
        logger.info('logging in' + user.email);
        response.redirect('/start');
     });
@@ -47,7 +47,7 @@ const accounts = {
   authenticate(request, response) {
     const user = userstore.getUserByEmail(request.body.email);
     if ((user) && (user.password === request.body.password)) {
-      response.cookie('playlist', user.email);
+      response.cookie('artCollection', user.email);
       logger.info('logging in' + user.email);
       response.redirect('/start');
     } else {
@@ -56,7 +56,7 @@ const accounts = {
   },
 
   getCurrentUser (request) {
-    const userEmail = request.cookies.playlist;
+    const userEmail = request.cookies.artCollection;
     return userstore.getUserByEmail(userEmail);
   }
 }

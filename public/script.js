@@ -30,7 +30,7 @@ redbtn &&
     let username = prompt("What's your name?");
     welcomeUserDiv.style.display = "block";
     document.querySelector("#welcomeuser").innerHTML = `<p> Hello, ${username}, 
-    looking forward to hearing your playlists! Click this message to close it.</p>`;
+    looking forward to hearing your artCollections! Click this message to close it.</p>`;
     welcomeUserDiv.style.cursor = "pointer";
   });
 
@@ -57,6 +57,6 @@ ratebtn &&
   }
 });
 
-$(".delsong").click(() => confirm('Really delete this song?'))
+$(".delartwork").click(() => confirm('Really delete this artwork?'))
 
-$(".delplaylist").click(() => confirm('Really delete this playlist?'))
+$(".delartCollection").click(() => confirm('Really delete this artCollection?'))
