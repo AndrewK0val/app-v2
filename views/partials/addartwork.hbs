@@ -1,5 +1,5 @@
-<form class="ui stacked segment form" action="/artCollection/{{artCollection.id}}/addartwork" method="POST">
-  <div class="four fields">
+<form class="ui stacked segment form" action="/artCollection/{{artCollection.id}}/addartwork" method="POST" enctype="multipart/form-data">
+  <div class="five fields">
     <div class="field">
       <label>Title</label>
       <input placeholder="Title" type="text" name="title" autofocus required>
@@ -22,6 +22,10 @@
       <label>PublishDate</label>
       <input placeholder="PublishDate" type="date" name="publishDate" required>
     </div>
+      <label>Image</label>
+      <input placeholder="Image" type="file" name="picture" required>
+    </div>
+
   </div>
   <button class="ui blue submit button">Add Artwork</button>
 </form>

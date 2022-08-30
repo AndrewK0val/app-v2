@@ -4,7 +4,72 @@
 
 {{#if artCollection.artworks}}
 
-  <table class="ui fixed striped table" id="artworkTable">
+ <section class="container">
+  {{#each artCollection.artworks}}
+   <div class="row" id="artworkDisplay">
+    <form action="/artCollection/{{../artCollection.id}}/updateartwork/{{id}}" method="POST" id="content">
+    
+      <div class="row">
+        <div class="col">
+             <img src="https://i.redd.it/m9no0tkm6nk91.jpg" alt="" class="img-thumbnail" id="artworkImage">
+
+             <a href="/artCollection/{{../artCollection.id}}/deleteartwork/{{id}}" class="btn btn-dark btn-lg" style="padding-bottom:11pt;">
+            <i class="icon trash"></i>
+          </a>
+
+            <a href="" class="btn btn-dark btn-lg" id="upload_link" style="padding-bottom:11pt;">
+                         
+            <i class="file image icon"></i>
+          </a>
+          </div>
+          <input id="upload" type="file" name="picture"/> 
+          {{!-- <div class="col">
+
+
+          </div> --}}
+
+      </div>
+
+      <div class="col">
+        <div class="row">
+          <div class="col" id="inputFields"><h3>Title</h3>
+            <span class="ui input">
+              <input placeholder="Title" type="text" size="30" name="title" autofocus required value = "{{capitalise title}}">
+            </span>
+          </div>
+          <div class="col" id="inputFields"><h3>Artist</h3>
+           <span class="ui input">
+              <input placeholder="Artist" type="text" size="30" name="artist" required value = "{{capitalise artist}}">
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="row">
+          <div class="col" id="inputFields"><h3>medium</h3>
+            <span class="ui input">
+                <select name="medium" id="medium" style="padding:.6em 2.5em; border:solid lightgray 1px;border-radius:5px;">
+                <option value="{{medium}}" selected="selected">{{medium}}</option>
+                {{{populate medium}}}       
+                </select>
+            </span>
+          </div>
+            <div class="col" id="inputFields"><h3>Published On:</h3>
+              <span class="ui input">
+                <input placeholder="PublishDate" type="text" name="publishDate" required value = "{{publishDate}}">
+              </span>
+          </div>
+        </div>
+      </div>
+    
+    
+    </form>
+    {{/each}}
+   </div>
+ </section>
+
+  {{!-- <table class="ui fixed striped table" id="artworkTable">
     {{#each artCollection.artworks}}
     <form class = "ui form" action="/artCollection/{{../artCollection.id}}/updateartwork/{{id}}" method="POST">
 
@@ -13,7 +78,7 @@
     <div class="ui grid">
         <div class="three column row">
           <div class="column" id="artworkImageContainer">
-            <img  src="https://i.redd.it/m9no0tkm6nk91.jpg" alt="" class="artworkImage" >
+            <img class="ui image medium" src="https://i.redd.it/m9no0tkm6nk91.jpg" alt="" class="artworkImage" >
           </div>
 
   
@@ -57,7 +122,7 @@
 
 
     </form>
-   {{/each}}
+   {{/each}} --}}
 
 
 
@@ -117,3 +182,9 @@
   </button>
 
 {{/if}}
+
+<script>
+
+
+
+</script>

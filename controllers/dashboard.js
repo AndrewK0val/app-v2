@@ -35,7 +35,7 @@ const dashboard = {
   addArtCollection(request, response) {
     const date = new Date();
     const loggedInUser = accounts.getCurrentUser(request);
-    const newArtCollection = {
+    const newPlayList = {
       id: uuid(),
       userid: loggedInUser.id,
       title: request.body.title,
@@ -43,8 +43,8 @@ const dashboard = {
       date: date,
       artworks: []
     };
-    logger.debug("Creating a new ArtCollection" + newArtCollection);
-    artCollectionStore.addArtCollection(newArtCollection, function() {
+    logger.debug("Creating a new ArtCollection" + newPlayList);
+    artCollectionStore.addArtCollection(newPlayList, function() {
       response.redirect("/dashboard");
     });
   }

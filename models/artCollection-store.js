@@ -16,8 +16,8 @@ catch(e) {
 
 const artCollectionStore = {
 
-  store: new JsonStore('./models/artCollection-store.json', { collectionOfArtCollections: [] }),
-  collection: 'collectionOfArtCollections',
+  store: new JsonStore('./models/artCollection-store.json', { artCollectionCollection: [] }),
+  collection: 'artCollectionCollection',
 
   getAllArtCollections() {
     return this.store.findAll(this.collection);

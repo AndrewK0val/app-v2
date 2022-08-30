@@ -35,19 +35,68 @@ h1 {
 }
 
 
-#artworkRow{
+#artworkImage
+  {
+    display: block;
+    position:relative;
+    max-height: 300px;
+
+
+  }
+
+
+  #artworkDisplay.row
+  {
+    display: block;
+    position:relative;
+    /* I was wondering why the right side of my form 
+    elements kept getting shorter every time I add an artwork
+    I have no idea how but the two lines below somehow fixed this */
+    margin-left: 0pt;
+    padding: 0;
+  }
+
+  #content
+  {
+    background-color: #e3d9cf;
+    padding: 20pt;
+    width: 100%;
+    position: relative;
+    display: flex;
+    border: 5px solid black;
+    border-radius: 7px;;
+   
+  }
+
+
+  #upload{
+    display: none;
+  }
+
+  #inputFields
+  {
+    margin: 4%;
+    padding-top: 10pt;
+    padding-bottom: 20pt;
+
+    border: 3px solid gray;
+
+  }
+
+
+/* #artworkRow{
 
   height: 200pt;
+  width: 80vw;
 }
 
 
 @media (min-width: 840px){
 
   #artworkRow
-  {
-  
-    height: 300px;;
-      
+  {  
+    height: 300px;
+    width: 60vw;
   }
   
   }
@@ -57,18 +106,11 @@ h1 {
 
   }
 
-  .artworkImage
-  {
-    float: right;
-  }
+  
 
-  #artworkImageContainer::after
+  #artworkImageContainer
   {
-    /* display: block; */
-    content:"";
-    clear: both;
-    /* margin-left: auto;
-    margin-right: auto; */
-    /* height: 100%; */
-    display: table;
-  }
+    margin-left: auto;
+    margin-right: auto;
+    height: 50%;
+    /* display: table; */
