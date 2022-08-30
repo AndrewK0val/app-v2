@@ -15,6 +15,44 @@
           "duration": "4mins"
         }
       ]
+    },
+    {
+      "id": "b53aa3e0-875e-43cf-bc2f-47c3703fadb6",
+      "userid": "3ad52697-6d98-4d80-8273-084de55a86c0",
+      "title": "fjnghn",
+      "picture": "http://res.cloudinary.com/dtt2e86e2/image/upload/v1661780826/qesugrfdin4iwlxssh5l.jpg",
+      "date": "2022-08-29T13:47:04.503Z",
+      "artworks": [
+        {
+          "id": "2a5aef14-2564-46c4-a826-725866dbc53d",
+          "title": "csdcd",
+          "artist": "ghgfhgdf",
+          "duration": "4mins"
+        }
+      ]
+    },
+    {
+      "id": "7f868e46-5e0e-4977-9bce-a16a219577ce",
+      "userid": "3ad52697-6d98-4d80-8273-084de55a86c0",
+      "title": "ywuetitjb",
+      "picture": "http://res.cloudinary.com/dtt2e86e2/image/upload/v1661790519/mdua7ggrbgdno317wrcf.jpg",
+      "date": "2022-08-29T16:28:38.469Z",
+      "artworks": [
+        {
+          "id": "5cc4a9bd-c2e9-491c-bad5-cac2b08559c6",
+          "title": "8903454o ",
+          "artist": "Sghlh ",
+          "medium": "Classical",
+          "publishDate": "80"
+        },
+        {
+          "id": "fb22866f-64b8-46ef-a2db-f85ff257e915",
+          "title": "fsgnsfg",
+          "artist": "dfggdfg",
+          "medium": "Classical",
+          "publishDate": "2005-06-05"
+        }
+      ]
     }
   ]
 }

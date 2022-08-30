@@ -24,7 +24,7 @@ const start = {
       }
 
       const viewData = {
-        title: 'Welcome to the ArtCollection App!',
+        title: 'Welcome to the ArtArchive!',
         totalArtCollections: numArtCollections,
         totalArtworks: numArtworks,
         fullname: loggedInUser.firstName + ' ' + loggedInUser.lastName,

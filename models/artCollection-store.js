@@ -66,8 +66,8 @@ const artCollectionStore = {
     const index = artworks.findIndex(artwork => artwork.id === artworkId);
     artworks[index].title = updatedArtwork.title;
     artworks[index].artist = updatedArtwork.artist;
-    artworks[index].genre = updatedArtwork.genre;
-    artworks[index].duration = updatedArtwork.duration;
+    artworks[index].medium = updatedArtwork.medium;
+    artworks[index].publishDate = updatedArtwork.publishDate;
   },
   
   getUserArtCollections(userid) {

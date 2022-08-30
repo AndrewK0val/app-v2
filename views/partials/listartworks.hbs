@@ -4,18 +4,66 @@
 
 {{#if artCollection.artworks}}
 
-  <table class="ui fixed striped table">
-    <thead>
-      <tr>
-        <th class="four wide">Artwork</th>
-        <th class="four wide">Artist</th>
-        <th class="three wide">Genre</th>
-        <th class="three wide">Duration</th>
-        <th class="one wide"> </th>
-        <th class="one wide"> </th>
-      </tr>
-    </thead>
-  <tbody>
+  <table class="ui fixed striped table" id="artworkTable">
+    {{#each artCollection.artworks}}
+    <form class = "ui form" action="/artCollection/{{../artCollection.id}}/updateartwork/{{id}}" method="POST">
+
+  <tr>
+  <div class="ui segment" id="artworkRow">
+    <div class="ui grid">
+        <div class="three column row">
+          <div class="column" id="artworkImageContainer">
+            <img  src="https://i.redd.it/m9no0tkm6nk91.jpg" alt="" class="artworkImage" >
+          </div>
+
+  
+        <div class="column">
+            <div class="two column row">
+              <div class="column" id="contentForArtworkRow">Artwork Title
+                <span class="ui input">
+                  <input placeholder="Title" type="text" size="30" name="title" autofocus required value = "{{capitalise title}}">
+                </span>
+
+              </div>
+              <div class="column" id="contentForArtworkRow">Artist
+                <span class="ui input">
+                  <input <input placeholder="Artist" type="text" size="30" name="artist" required value = "{{capitalise artist}}">>
+                </span>
+              </div>
+            </div>
+        </div>
+
+        <div class="column">
+          <div class="two column row">
+            <div class="column"> Medium
+              <span class="ui input">
+                 <select name="medium" id="medium" style="padding:.6em 2.5em; border:solid lightgray 1px;border-radius:5px;">
+                  <option value="{{medium}}" selected="selected">{{medium}}</option>
+                  {{{populate medium}}}       
+                  </select>
+              </span>
+            </div>
+            <div class="column"> Published On:
+                <span class="ui input">
+                  <input placeholder="PublishDate" type="text" name="publishDate" required value = "{{publishDate}}">
+              </span>
+            </div>
+          </div>  
+        </div>
+      </div>
+    </div>    
+  </div>
+  </tr>
+
+
+    </form>
+   {{/each}}
+
+
+
+
+
+  {{!-- <tbody>
       {{#each artCollection.artworks}}
       <form class = "ui form" action="/artCollection/{{../artCollection.id}}/updateartwork/{{id}}" method="POST">
       <tr class="fields">
@@ -31,15 +79,15 @@
         </td>
         <td class="field">
          <span class="ui input">
-          <select name="genre" id="genre" style="padding:.6em 2.5em; border:solid lightgray 1px;border-radius:5px;">
-            <option value="{{genre}}" selected="selected">{{genre}}</option>
-            {{{populate genre}}}       
+          <select name="medium" id="medium" style="padding:.6em 2.5em; border:solid lightgray 1px;border-radius:5px;">
+            <option value="{{medium}}" selected="selected">{{medium}}</option>
+            {{{populate medium}}}       
 			    </select>       
           </span>
         </td>
         <td class="field">
           <span class="ui input">
-            <input placeholder="Duration" type="text" name="duration" required value = "{{duration}}">
+            <input placeholder="PublishDate" type="text" name="publishDate" required value = "{{publishDate}}">
           </span>
         </td>
         <td class="center aligned">
@@ -50,10 +98,14 @@
             <i class="icon trash"></i>
           </a>
         </td>
+          <td>
+            <img class="ui small image" src="https://i.redd.it/m9no0tkm6nk91.jpg" alt="">
+        </td>
       </tr>
+     
       </form> 
       {{/each}}
-    </tbody>
+    </tbody> --}}
   </table>
 
   <p>

@@ -33,3 +33,42 @@ h1 {
   line-height:20px;
   font-weight:bold;
 }
+
+
+#artworkRow{
+
+  height: 200pt;
+}
+
+
+@media (min-width: 840px){
+
+  #artworkRow
+  {
+  
+    height: 300px;;
+      
+  }
+  
+  }
+  #contentForArtworkRow
+  {
+    margin:30pt;
+
+  }
+
+  .artworkImage
+  {
+    float: right;
+  }
+
+  #artworkImageContainer::after
+  {
+    /* display: block; */
+    content:"";
+    clear: both;
+    /* margin-left: auto;
+    margin-right: auto; */
+    /* height: 100%; */
+    display: table;
+  }

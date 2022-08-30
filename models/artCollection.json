@@ -19,8 +19,8 @@
           "id": "b88135ac-0847-48c4-b47c-96702de1e69c",
           "title": "crab rave",
           "artist": "noiseStorm",
-          "genre": "Disco",
-          "duration": "4mins"
+          "medium": "Disco",
+          "publishDate": "4mins"
         }
       ]
     }

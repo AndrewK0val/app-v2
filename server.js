@@ -91,11 +91,11 @@ app.engine(
         let dayname = days[day]
         return `${dayname} ${monthname} ${dateNum}, ${year}`;
       },
-      populate: (genre) => {
-        const genres = ["Classical", "Rock", "Pop", "Disco", "Soul"];
-        genres.splice(genres.indexOf(genre), 1);
+      populate: (medium) => {
+        const mediums = ["Classical", "Rock", "Pop", "Disco", "Soul"];
+        mediums.splice(mediums.indexOf(medium), 1);
         let options = ``;
-        for (let item of genres) {
+        for (let item of mediums) {
           options += `<option value ="${item}">${item}</option>`;
         }
         return options;

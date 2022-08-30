@@ -13,7 +13,7 @@ const about = {
     logger.info('about rendering');
     if (loggedInUser) {
       const viewData = {
-        title: 'About the ArtCollection App',
+        title: 'About the ArtArchive',
         developers: developerStore.getAllDevelopers(),
         fullname: loggedInUser.firstName + ' ' + loggedInUser.lastName,
         picture:loggedInUser.picture

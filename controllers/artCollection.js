@@ -35,8 +35,8 @@ const artCollection = {
       id: uuid(),
       title: request.body.title,
       artist: request.body.artist,
-      genre: request.body.genre,
-      duration: request.body.duration
+      medium: request.body.medium,
+      publishDate: request.body.publishDate
     };
     artCollectionStore.addArtwork(artCollectionId, newArtwork);
     response.redirect('/artCollection/' + artCollectionId);
@@ -48,8 +48,8 @@ const artCollection = {
     const updatedArtwork = {
       title: request.body.title,
       artist: request.body.artist,
-      genre: request.body.genre,
-      duration: request.body.duration
+      medium: request.body.medium,
+      publishDate: request.body.publishDate
     };
     artCollectionStore.editArtwork(artCollectionId, artworkId, updatedArtwork);
     response.redirect('/artCollection/' + artCollectionId);
